@@ -13,4 +13,9 @@ export class AppComponent {
   precio2=250;
   precio3=450;
   mes = 'MES';
+  paquetes = [
+    {titulo: 'Basico', precio: 150, mes : 'mes', d1: '10 users included', d2:'2 GB of storage', d3:'Email suppor', d4:'-'},
+    {titulo: 'Recomendado', precio: 250, mes : 'mes', d1: '10 users included', d2:'2 GB of storage', d3:'Email suppor', d4:'-'},
+    {titulo: 'Avanzado', precio: 450, mes : 'mes', d1: '10 users included', d2:'2 GB of storage', d3:'Email suppor', d4:'algo más'}
+   ] ;
 }
