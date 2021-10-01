@@ -2,7 +2,7 @@
   <header>
     <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-        <span class="fs-4">{{title}}</span>
+        <span class="fs-4">{{title | titlecase}}</span>
       </a>
 
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
@@ -14,7 +14,7 @@
     </div>
 
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-      <h1 class="display-4 fw-normal">PAQUETES</h1>
+      <h1 class="display-4 fw-normal">{{ titulo | uppercase }}</h1>
       <p class="fs-5 text-muted">Te presentamos nuestro paquetes de servicios.</p>
     </div>
   </header>
@@ -27,12 +27,12 @@
             <h4 class="my-0 fw-normal">Free</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1>
+            <h1 class="card-title pricing-card-title">{{ precio1 | currency: 'JPY' : 'symbol' : '.0-0' }}<small class="text-muted fw-light">/{{ mes | lowercase }}</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>10 users included</li>
               <li>2 GB of storage</li>
               <li>Email support</li>
-              <li>Help center access</li>
+              <li>{{ precio1 }}</li>
             </ul>
             <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
           </div>
@@ -44,12 +44,12 @@
             <h4 class="my-0 fw-normal">Pro</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/mo</small></h1>
+            <h1 class="card-title pricing-card-title">{{ precio2 | currency: 'EUR' : 'symbol' : '.0-0' }}<small class="text-muted fw-light">/{{ mes | lowercase }}</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>20 users included</li>
               <li>10 GB of storage</li>
               <li>Priority email support</li>
-              <li>Help center access</li>
+              <li>{{ precio2 }}</li>
             </ul>
             <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
           </div>
@@ -61,12 +61,12 @@
             <h4 class="my-0 fw-normal">Enterprise</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
+            <h1 class="card-title pricing-card-title">{{ precio3 | currency: 'USD' : 'symbol' : '.0-0' }}<small class="text-muted fw-light">/{{ mes | lowercase }}</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>30 users included</li>
               <li>15 GB of storage</li>
               <li>Phone and email support</li>
-              <li>Help center access</li>
+              <li>{{ precio3 }}</li>
             </ul>
             <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
           </div>
@@ -134,8 +134,7 @@
   <footer class="pt-4 my-md-5 pt-md-5 border-top">
     <div class="row">
       <div class="col-12 col-md">
-        <img class="mb-2" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="24" height="19">
-        <small class="d-block mb-3 text-muted">© 2021–2022</small>
+        <small class="d-block mb-3 text-muted">© {{ fecha | date:'dd/MM/Y' }}</small>
       </div>
       <div class="col-6 col-md">
         <h5>Menu</h5>

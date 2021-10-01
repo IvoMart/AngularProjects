@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Marketing Digital';
+  title = 'marketing digital';
+  titulo  = 'paquetes';
+  fecha = new Date();
+  precio1=150;
+  precio2=250;
+  precio3=450;
+  mes = 'MES';
 }
