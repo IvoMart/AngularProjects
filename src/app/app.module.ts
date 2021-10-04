@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './pages/heroes/heroes.component';
 import { DetallesComponent } from './pages/detalles/detalles.component';
 import { TitulosPipe } from './pipes/titulos.pipe';
+import { OrdenaAparienciaPipe } from './pipes/ordena-apariencia.pipe';
+import { OrdenaNombrePipe } from './pipes/ordena-nombre.pipe';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { TitulosPipe } from './pipes/titulos.pipe';
     HeroesComponent,
     DetallesComponent,
     TitulosPipe,
+    OrdenaAparienciaPipe,
+    OrdenaNombrePipe,
   ],
   imports: [
     BrowserModule,
