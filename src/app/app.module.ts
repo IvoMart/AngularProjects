@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,10 +14,11 @@ import { TitulosPipe } from './pipes/titulos.pipe';
     AppComponent,
     HeroesComponent,
     DetallesComponent,
-    TitulosPipe
+    TitulosPipe,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
