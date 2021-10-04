@@ -8,9 +8,10 @@ import { HeroesService } from 'src/app/services/heroes.service';
 })
 export class HeroesComponent implements OnInit {
 
+  buscaNombre = '';
+
   constructor(public hs: HeroesService ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

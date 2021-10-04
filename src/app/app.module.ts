@@ -10,6 +10,9 @@ import { DetallesComponent } from './pages/detalles/detalles.component';
 import { TitulosPipe } from './pipes/titulos.pipe';
 import { OrdenaAparienciaPipe } from './pipes/ordena-apariencia.pipe';
 import { OrdenaNombrePipe } from './pipes/ordena-nombre.pipe';
+import { BuscarNombrePipe } from './pipes/busca-nombre.pipe';
+import { BuscaAparienciaPipe } from './pipes/busca-apariencia.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,11 +22,14 @@ import { OrdenaNombrePipe } from './pipes/ordena-nombre.pipe';
     TitulosPipe,
     OrdenaAparienciaPipe,
     OrdenaNombrePipe,
+    BuscarNombrePipe,
+    BuscaAparienciaPipe,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
