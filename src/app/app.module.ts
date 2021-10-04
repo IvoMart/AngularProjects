@@ -11,8 +11,10 @@ import { TitulosPipe } from './pipes/titulos.pipe';
 import { OrdenaAparienciaPipe } from './pipes/ordena-apariencia.pipe';
 import { OrdenaNombrePipe } from './pipes/ordena-nombre.pipe';
 import { BuscarNombrePipe } from './pipes/busca-nombre.pipe';
-import { BuscaAparienciaPipe } from './pipes/busca-apariencia.pipe';
+import { BuscarAparienciaPipe } from './pipes/busca-apariencia.pipe';
 import { FormsModule } from '@angular/forms';
+import { QuitaRepePipe } from './pipes/quita-repe.pipe';
+import { QuitaRepeAparPipe } from './pipes/quita-repe-apar.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { FormsModule } from '@angular/forms';
     OrdenaAparienciaPipe,
     OrdenaNombrePipe,
     BuscarNombrePipe,
-    BuscaAparienciaPipe,
+    BuscarAparienciaPipe,
+    QuitaRepePipe,
+    QuitaRepeAparPipe,
   ],
   imports: [
     BrowserModule,

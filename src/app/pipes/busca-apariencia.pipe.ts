@@ -1,12 +1,18 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'buscaApariencia'
+  name: 'buscarApariencia'
 })
-export class BuscaAparienciaPipe implements PipeTransform {
+export class BuscarAparienciaPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(apar: any, arg: any): any {
+    const buscaApariencia = [];
+    for (const recorre of apar) {
+      if (recorre.biography.alignment.toLowerCase().indexOf(arg.toLowerCase()) > -1) {
+        buscaApariencia.push(recorre);
+      }
+    }
+
+    return buscaApariencia;
   }
-
 }

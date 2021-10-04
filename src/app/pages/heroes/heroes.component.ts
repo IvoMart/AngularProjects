@@ -9,6 +9,7 @@ import { HeroesService } from 'src/app/services/heroes.service';
 export class HeroesComponent implements OnInit {
 
   buscaNombre = '';
+  buscaApariencia = '';
 
   constructor(public hs: HeroesService ) { }
 
