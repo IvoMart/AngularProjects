@@ -14,8 +14,13 @@ export class HeroesService {
     this.cargarHeroes();
   }
 
-  cargarHeroes() {
-    return this.http
+  async detalleHeroe(id : string){
+    return await this.http
+    .get(`https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/id/${id}.json`)
+  }
+
+  async cargarHeroes() {
+    return await this.http
     .get('https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json')
     .subscribe( (respuesta: any) => {
         this.heroes = respuesta;
