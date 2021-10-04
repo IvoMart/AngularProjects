@@ -1,3 +1,6 @@
+/**
+ * Source: https://akabab.github.io/superhero-api/api/
+ */
 export interface Heroe {
     id: string,
     name: string,
