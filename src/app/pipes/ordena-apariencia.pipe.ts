@@ -8,8 +8,8 @@ export class OrdenaAparienciaPipe implements PipeTransform {
  * Logica de orden: Mientras el nombre es por orden digito a digito mayor
  * elige la opción de ubicación posterior.
  */
-  transform(value: any): any {
-    return value.sort( (a: any,b: any) => {
+  transform(value__: any): any {
+    return value__.sort( (a: any,b: any) => {
       if (a.biography.alignment < b.biography.alignment) 
       {
         return -1;

@@ -5,11 +5,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class BuscarAparienciaPipe implements PipeTransform {
 
-  transform(apar: any, arg: any): any {
+  transform(value1: any, arg_: any): any {
     const buscaApariencia = [];
-    for (const recorre of apar) {
-      if (recorre.biography.alignment.toLowerCase().indexOf(arg.toLowerCase()) > -1) {
-        buscaApariencia.push(recorre);
+    for ( const hr of value1 ){
+      if ( hr.biography.alignment.toLowerCase().indexOf(arg_.toLowerCase()) > -1 ) {
+         buscaApariencia.push(hr);
       }
     }
 
